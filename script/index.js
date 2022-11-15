@@ -11,7 +11,7 @@ year.addEventListener("click", () => {
 
 async function sortByYear(page) {
   let data = await fetch(
-    `http://localhost:3001/data?_limit=10&_page=${page}&_sort=release_year&_order=asc`
+    `https://risksek123.herokuapp.com/data?_limit=10&_page=${page}&_sort=release_year&_order=asc`
   );
   let res = await data.json();
 
@@ -24,7 +24,7 @@ dsc.addEventListener("click", () => {
 
 async function sortByYeardesc(page) {
   let data = await fetch(
-    `http://localhost:3001/data?_limit=10&_page=${page}&_sort=release_year&_order=desc`
+    `https://risksek123.herokuapp.com/data?_limit=10&_page=${page}&_sort=release_year&_order=desc`
   );
   let res = await data.json();
 
@@ -54,7 +54,10 @@ next.addEventListener("click", () => {
 });
 
 async function getData(page) {
-  let data = await fetch(`http://localhost:3001/data?_limit=10&_page=${page}`);
+  let data = await fetch(
+    `https://risksek123.herokuapp.com/data?_limit=10&_page=${page}`
+  );
+  //https://risksek123.herokuapp.com/data
 
   let res = await data.json();
 

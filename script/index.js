@@ -2,12 +2,33 @@ let page = 1;
 let container = document.getElementById("container");
 let prev = document.getElementById("previous");
 let next = document.getElementById("next");
-let slec = document.getElementById("filtering");
+let year = document.getElementById("asc");
+let dsc = document.getElementById("dsc");
 
-console.log(slec.value);
+year.addEventListener("click", () => {
+  sortByYear(page);
+});
 
-function sortingData(arr) {
-  arr.filter((item) => item.movie_name === slec);
+async function sortByYear(page) {
+  let data = await fetch(
+    `http://localhost:3001/data?_limit=10&_page=${page}&_sort=release_year&_order=asc`
+  );
+  let res = await data.json();
+
+  displayData(res);
+}
+
+dsc.addEventListener("click", () => {
+  sortByYeardesc(page);
+});
+
+async function sortByYeardesc(page) {
+  let data = await fetch(
+    `http://localhost:3001/data?_limit=10&_page=${page}&_sort=release_year&_order=desc`
+  );
+  let res = await data.json();
+
+  displayData(res);
 }
 
 prev.addEventListener("click", () => {
@@ -16,6 +37,8 @@ prev.addEventListener("click", () => {
     prev.disabled = true;
   } else {
     getData(page);
+    sortByYear(page);
+    sortByYeardesc(page);
   }
 });
 
@@ -25,6 +48,8 @@ next.addEventListener("click", () => {
     alert("You Reach the end of Data");
   } else {
     getData(page);
+    sortByYear(page);
+    sortByYeardesc(page);
   }
 });
 

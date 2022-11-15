@@ -4,18 +4,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/index.css">
     <title>Risk-Ass</title>
 </head>
 <body>
-    <div >
-        <select id="filtering">
-            <option value="....."></option>
-            <option value="release_year">release_year</option>
-            <option value="movie_name">movie_name</option>
-        </select>
+    <div class="sortBtn">
+       <button id="asc" type="button" class="btn btn-success">Sort By Year Asc</button>
+       <button id="dsc" type="button" class="btn btn-primary">Sort By Year dsc</button>
     </div>
 
-    <div>
+    <div class="main">
         <table class="table table-bordered">
            <thead>
             <tr>
@@ -28,7 +26,7 @@
            <tbody id="container"></tbody>
     </table>
 </div>
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between pagination">
     <button id="previous" type="button" class="btn btn-primary">Previous</button><button id="next" type="button" class="btn btn-secondary">Next</button>
 </div>
 </body>

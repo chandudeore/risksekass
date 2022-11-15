@@ -3,9 +3,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Risk-Ass</title>
 </head>
 <body>
-    
+    <div >
+        <select id="filtering">
+            <option value="....."></option>
+            <option value="release_year">release_year</option>
+            <option value="movie_name">movie_name</option>
+        </select>
+    </div>
+
+    <div>
+        <table class="table table-bordered">
+           <thead>
+            <tr>
+                <th>ID</th>
+                <th>Movie-Name</th>
+                <th>Movie-Genres</th>
+                <th>Release Year</th>
+            </tr>
+           </thead>
+           <tbody id="container"></tbody>
+    </table>
+</div>
+<div class="d-flex justify-content-between">
+    <button id="previous" type="button" class="btn btn-primary">Previous</button><button id="next" type="button" class="btn btn-secondary">Next</button>
+</div>
 </body>
 </html>
+
+<script src="./script/index.js"></script>

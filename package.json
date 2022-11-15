@@ -1,0 +1,24 @@
+{
+  "name": "risksekass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandudeore/risksekass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chandudeore/risksekass/issues"
+  },
+  "homepage": "https://github.com/chandudeore/risksekass#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "json-server": "^0.17.1"
+  }
+}
